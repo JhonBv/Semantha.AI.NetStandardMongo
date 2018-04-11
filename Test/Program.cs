@@ -6,9 +6,14 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            string connString = "";
+            
+            //Your DB Connection string
+            string connString = myConfig.conn;
 
-            MongoDbAtlasConnector.GetUSerCollection col = new MongoDbAtlasConnector.GetUSerCollection(connString,"epimarketdb");
+            //your Mongo Database
+            string database = myConfig.dbName;
+
+            MongoDbAtlasConnector.GetUSerCollection col = new MongoDbAtlasConnector.GetUSerCollection(connString,database);
 
             foreach (var i in col.GetAllUsers())
             {
