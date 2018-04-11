@@ -9,4 +9,10 @@
     <ProjectReference Include="..\MongoDbAtlasConnector\MongoDbAtlasConnector.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="amb.txt">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>
