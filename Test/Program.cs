@@ -6,9 +6,7 @@ namespace Test
     {
         static void Main(string[] args)
         {
-            string connString = "mongodb://jhonb:P1pt1cl3@clysmacluster-shard-00-00-sldiv.mongodb.net:27017,clysma" +
-            "cluster-shard-00-01-sldiv.mongodb.net:27017,clysmacluster-shard-00-02-sldiv.mong" +
-            "odb.net:27017/admin?replicaSet=clysmacluster-shard-0&ssl=true";
+            string connString = "";
 
             MongoDbAtlasConnector.GetUSerCollection col = new MongoDbAtlasConnector.GetUSerCollection(connString,"epimarketdb");
 
