@@ -8,11 +8,10 @@ namespace Test
         {
             //Loading vals from text files (ignored by Git)
             string[] dbcons = System.IO.File.ReadAllLines(@"amb.txt");
-            string[] dbnames = System.IO.File.ReadAllLines(@"dbname.txt");
             
 
             myConfig.conn = dbcons[0].ToString();
-            myConfig.dbName = dbnames[0].ToString();
+            myConfig.dbName = dbcons[1].ToString();
 
 
             //Your DB Connection string
