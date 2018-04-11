@@ -2,7 +2,6 @@
 using System.Collections.Generic;
 using System.Text;
 using MongoDB.Driver;
-using Semantha.AI.BCL.Models.Models;
 
 namespace MongoDbAtlasConnector.Infrastructure
 {

@@ -24,27 +24,6 @@
             Mongo db name
             </summary>
         </member>
-        <member name="T:MongoDbAtlasConnector.GetUSerCollection">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="F:MongoDbAtlasConnector.GetUSerCollection._ctx">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:MongoDbAtlasConnector.GetUSerCollection.#ctor(System.String,System.String)">
-            <summary>
-            
-            </summary>
-        </member>
-        <member name="M:MongoDbAtlasConnector.GetUSerCollection.GetAllUsers">
-            <summary>
-            
-            </summary>
-            <returns></returns>
-        </member>
         <member name="T:MongoDbAtlasConnector.Infrastructure.BaseContext">
             <summary>
             Base context class
@@ -81,6 +60,27 @@
             <summary>
             Constructor
             </summary>
+        </member>
+        <member name="T:MongoDbAtlasConnector.UserRepository">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MongoDbAtlasConnector.UserRepository._ctx">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MongoDbAtlasConnector.UserRepository.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MongoDbAtlasConnector.UserRepository.GetAllUsers">
+            <summary>
+            
+            </summary>
+            <returns></returns>
         </member>
     </members>
 </doc>

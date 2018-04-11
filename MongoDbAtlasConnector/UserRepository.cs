@@ -2,18 +2,16 @@
 using MongoDB.Driver;
 
 using MongoDbAtlasConnector.Infrastructure;
-using Semantha.AI.BCL.Models.Models;
 using System.Linq;
 using System.Collections.Generic;
-using System.Text;
-using System.Threading.Tasks;
+using Semantha.AI.BCL.MongoDB.Models.DomainModels;
 
 namespace MongoDbAtlasConnector
 {
     /// <summary>
     /// 
     /// </summary>
-    public class GetUSerCollection
+    public class UserRepository
     {
         /// <summary>
         /// 
@@ -23,7 +21,7 @@ namespace MongoDbAtlasConnector
         /// <summary>
         /// 
         /// </summary>
-        public GetUSerCollection(string connString, string dbname)
+        public UserRepository(string connString, string dbname)
         {
             Configuration._connectionString = connString;
             Configuration._databasename = dbname;
@@ -34,20 +32,23 @@ namespace MongoDbAtlasConnector
         /// 
         /// </summary>
         /// <returns></returns>
-        public List<User> GetAllUsers()
+        public List<UserModel> GetAllUsers()
         {
             
-            var userCollection = _ctx.mDatabase.GetCollection<User>("userlogins");
+            var userCollection = _ctx.mDatabase.GetCollection<UserModel>("users");
             var filter = Builders<BsonDocument>.Filter.Empty;
 
             var result = userCollection.Find(new BsonDocument()).ToList();
             return result;
+        }
 
-            
+        public void AddUSer(BsonDocument user)
+        {
+            //JB. Specify the collection in which to store documents (data ;P)
+            var userCollection = _ctx.mDatabase.GetCollection<BsonDocument>("users");
 
-            
+            userCollection.InsertOne(user);
 
-            
         }
 
 

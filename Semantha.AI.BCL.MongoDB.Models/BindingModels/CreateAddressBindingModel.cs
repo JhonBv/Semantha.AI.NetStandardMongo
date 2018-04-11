@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using System.Text;
 
-namespace MongoDbAtlasConnector
+namespace Semantha.AI.BCL.MongoDB.Models.BindingModels
 {
-    public class Address
+    public class CreateAddressBindingModel
     {
-        public string loginId { get; set; }
-   
+        public string userId { get; set; }
+
         public string lineOne { get; set; }
         public string lineTwo { get; set; }
         public string lineThree { get; set; }
