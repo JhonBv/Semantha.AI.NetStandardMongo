@@ -8,7 +8,7 @@ namespace Test
         {
             //Loading vals from text files (ignored by Git)
             string[] dbcons = System.IO.File.ReadAllLines(@"amb.txt");
-            string[] dbnames = System.IO.File.ReadAllLines(@"C:\Users\Jhon Barreiro\source\repos\MongoDbAtlasConnector\Test\dbname.txt");
+            string[] dbnames = System.IO.File.ReadAllLines(@"dbname.txt");
             
 
             myConfig.conn = dbcons[0].ToString();
