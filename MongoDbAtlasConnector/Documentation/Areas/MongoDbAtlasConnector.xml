@@ -1,0 +1,86 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MongoDbAtlasConnector</name>
+    </assembly>
+    <members>
+        <member name="T:MongoDbAtlasConnector.BaseClass">
+            <summary>
+            base class representing base conn
+            </summary>
+        </member>
+        <member name="T:MongoDbAtlasConnector.Configuration">
+            <summary>
+            Configuration for the Server and Database
+            </summary>
+        </member>
+        <member name="P:MongoDbAtlasConnector.Configuration._connectionString">
+            <summary>
+            Connection string
+            </summary>
+        </member>
+        <member name="P:MongoDbAtlasConnector.Configuration._databasename">
+            <summary>
+            Mongo db name
+            </summary>
+        </member>
+        <member name="T:MongoDbAtlasConnector.GetUSerCollection">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MongoDbAtlasConnector.GetUSerCollection._ctx">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MongoDbAtlasConnector.GetUSerCollection.#ctor(System.String,System.String)">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MongoDbAtlasConnector.GetUSerCollection.GetAllUsers">
+            <summary>
+            
+            </summary>
+            <returns></returns>
+        </member>
+        <member name="T:MongoDbAtlasConnector.Infrastructure.BaseContext">
+            <summary>
+            Base context class
+            </summary>
+        </member>
+        <member name="F:MongoDbAtlasConnector.Infrastructure.BaseContext._client">
+            <summary>
+            Set the MongoDB Client
+            </summary>
+        </member>
+        <member name="F:MongoDbAtlasConnector.Infrastructure.BaseContext._mDatabase">
+            <summary>
+            Sets MongoDb database to be used
+            </summary>
+        </member>
+        <member name="M:MongoDbAtlasConnector.Infrastructure.BaseContext.#ctor(System.String,System.String)">
+            <summary>
+            Pass on the connection String and DB name targeted.
+            </summary>
+            <param name="context">connection string including server name and any network credentials</param>
+            <param name="dbname">name of the Mongo database to be used</param>
+        </member>
+        <member name="T:MongoDbAtlasConnector.Infrastructure.MongoDbContext">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="F:MongoDbAtlasConnector.Infrastructure.MongoDbContext.mDatabase">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MongoDbAtlasConnector.Infrastructure.MongoDbContext.#ctor(System.String)">
+            <summary>
+            Constructor
+            </summary>
+        </member>
+    </members>
+</doc>

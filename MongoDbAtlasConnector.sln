@@ -5,6 +5,10 @@ VisualStudioVersion = 15.0.27428.2011
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MongoDbAtlasConnector", "MongoDbAtlasConnector\MongoDbAtlasConnector.csproj", "{B8D521D4-FEC8-4419-B45C-2D6BAB587480}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Test", "Test\Test.csproj", "{D04CAC2F-D0BF-4C51-A9B5-497F3AF73CBD}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Semantha.AI.BCL.MongoDB.Models", "Semantha.AI.BCL.MongoDB.Models\Semantha.AI.BCL.MongoDB.Models.csproj", "{13232331-A318-46CA-8813-C72516DDD54C}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +19,14 @@ Global
 		{B8D521D4-FEC8-4419-B45C-2D6BAB587480}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{B8D521D4-FEC8-4419-B45C-2D6BAB587480}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{B8D521D4-FEC8-4419-B45C-2D6BAB587480}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D04CAC2F-D0BF-4C51-A9B5-497F3AF73CBD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D04CAC2F-D0BF-4C51-A9B5-497F3AF73CBD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D04CAC2F-D0BF-4C51-A9B5-497F3AF73CBD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D04CAC2F-D0BF-4C51-A9B5-497F3AF73CBD}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13232331-A318-46CA-8813-C72516DDD54C}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13232331-A318-46CA-8813-C72516DDD54C}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13232331-A318-46CA-8813-C72516DDD54C}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13232331-A318-46CA-8813-C72516DDD54C}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
