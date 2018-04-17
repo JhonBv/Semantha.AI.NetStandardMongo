@@ -1,5 +1,6 @@
 ﻿using MongoDB.Bson;
 using MongoDbAtlasConnector.Infrastructure;
+using MongoDbAtlasConnector.Services;
 using Semantha.AI.BCL.MongoDB.Models.BindingModels;
 using Semantha.AI.BCL.MongoDB.Models.DomainModels;
 using System;
@@ -37,6 +38,7 @@ namespace MongoDbAtlasConnector.Factories
                 }
                 }
             };
+
 
             return document;
         }

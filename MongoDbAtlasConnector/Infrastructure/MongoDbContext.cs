@@ -1,8 +1,4 @@
 ﻿using MongoDB.Driver;
-using MongoDB.Driver.Core.Servers;
-using System;
-using System.Collections.Generic;
-using System.Text;
 
 namespace MongoDbAtlasConnector.Infrastructure
 {
@@ -20,13 +16,13 @@ namespace MongoDbAtlasConnector.Infrastructure
         
 
         /// <summary>
-        /// Constructor
+        /// Initialise the Context class passing the Mongo Database name you wish to use. 
         /// </summary>
-        public MongoDbContext(string dbName) 
+        public MongoDbContext() 
             :base(Configuration._connectionString,Configuration._databasename)
         {
             
-            mDatabase = _client.GetDatabase(dbName);
+            mDatabase = _client.GetDatabase(Configuration._databasename);
         }
     }
 }

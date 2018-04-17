@@ -16,8 +16,7 @@ namespace MongoDbAtlasConnector
 
         /// <summary>
         /// Mongo db name
-        /// </summary>
-        
+        /// </summary>        
         public static string _databasename{ get; set; }
     }
 }

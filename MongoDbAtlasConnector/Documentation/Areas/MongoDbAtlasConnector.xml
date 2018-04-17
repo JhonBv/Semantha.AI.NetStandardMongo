@@ -9,6 +9,18 @@
             base class representing base conn
             </summary>
         </member>
+        <member name="F:MongoDbAtlasConnector.BaseClass._ctx">
+            <summary>
+            
+            </summary>
+        </member>
+        <member name="M:MongoDbAtlasConnector.BaseClass.#ctor(System.String,System.String)">
+            <summary>
+            Initialise the DB Connector
+            </summary>
+            <param name="connString"></param>
+            <param name="dbname"></param>
+        </member>
         <member name="T:MongoDbAtlasConnector.Configuration">
             <summary>
             Configuration for the Server and Database
@@ -22,7 +34,7 @@
         <member name="P:MongoDbAtlasConnector.Configuration._databasename">
             <summary>
             Mongo db name
-            </summary>
+            </summary>        
         </member>
         <member name="T:MongoDbAtlasConnector.Infrastructure.BaseContext">
             <summary>
@@ -56,10 +68,44 @@
             
             </summary>
         </member>
-        <member name="M:MongoDbAtlasConnector.Infrastructure.MongoDbContext.#ctor(System.String)">
+        <member name="M:MongoDbAtlasConnector.Infrastructure.MongoDbContext.#ctor">
             <summary>
-            Constructor
+            Initialise the Context class passing the Mongo Database name you wish to use. 
             </summary>
+        </member>
+        <member name="T:MongoDbAtlasConnector.Services.FindUserEmail">
+            <summary>
+            Check if an email address already exist
+            </summary>
+        </member>
+        <member name="M:MongoDbAtlasConnector.Services.FindUserEmail.EmailExists(System.String,System.String)">
+            <summary>
+            Query the collection to check whether an Email address exist.
+            </summary>
+            <param name="email">email address to be checked</param>
+            <param name="collection">the collection where the query is to be performed</param>
+            <returns></returns>
+        </member>
+        <member name="T:MongoDbAtlasConnector.Services.FindUserName">
+            <summary>
+            Service module to find out if a username has been used already.
+            </summary>
+        </member>
+        <member name="M:MongoDbAtlasConnector.Services.FindUserName.UsernameExists(System.String,System.String)">
+            <summary>
+            Returns whetehr the user exist or not.
+            </summary>
+            <param name="username"></param>
+            <param name="collection"></param>
+            <returns></returns>
+        </member>
+        <member name="M:MongoDbAtlasConnector.Services.UserService.AddNewUser(Semantha.AI.BCL.MongoDB.Models.BindingModels.CreateUserBindingModel,System.String)">
+            <summary>
+            Add new user. Validate model and if username/email has not been taken, creates a new user record, otherwys, returns an invalid message
+            </summary>
+            <param name="user"></param>
+            <param name="collection"></param>
+            <returns>Ok if successful, </returns>
         </member>
         <member name="T:MongoDbAtlasConnector.UserRepository">
             <summary>
@@ -71,15 +117,23 @@
             
             </summary>
         </member>
-        <member name="M:MongoDbAtlasConnector.UserRepository.#ctor(System.String,System.String)">
+        <member name="M:MongoDbAtlasConnector.UserRepository.#ctor">
             <summary>
-            
+            Initialise UserRepository
             </summary>
         </member>
-        <member name="M:MongoDbAtlasConnector.UserRepository.GetAllUsers">
+        <member name="M:MongoDbAtlasConnector.UserRepository.GetAllUsers(System.String)">
             <summary>
-            
+            Returns a list of documents in the collection (users)
             </summary>
+            <returns></returns>
+        </member>
+        <member name="M:MongoDbAtlasConnector.UserRepository.AddUSer(MongoDB.Bson.BsonDocument,System.String)">
+            <summary>
+            Inserts a new user into the Mongo Collection (users)
+            </summary>
+            <param name="user">A BSonDocument with user details.</param>
+            <param name="collectionName">The name of the collection in which to add the new document</param>
             <returns></returns>
         </member>
     </members>

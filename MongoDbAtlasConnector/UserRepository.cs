@@ -5,6 +5,7 @@ using MongoDbAtlasConnector.Infrastructure;
 using System.Linq;
 using System.Collections.Generic;
 using Semantha.AI.BCL.MongoDB.Models.DomainModels;
+using MongoDbAtlasConnector.Services;
 
 namespace MongoDbAtlasConnector
 {
@@ -19,36 +20,43 @@ namespace MongoDbAtlasConnector
         public MongoDbContext _ctx;
 
         /// <summary>
-        /// 
+        /// Initialise UserRepository
         /// </summary>
-        public UserRepository(string connString, string dbname)
+        public UserRepository()
         {
-            Configuration._connectionString = connString;
-            Configuration._databasename = dbname;
-            _ctx = new MongoDbContext(Configuration._databasename);
+            _ctx = new MongoDbContext();
         }
+       
 
         /// <summary>
-        /// 
+        /// Returns a list of documents in the collection (users)
         /// </summary>
         /// <returns></returns>
-        public List<UserModel> GetAllUsers()
+        public List<UserModel> GetAllUsers(string collectionName)
         {
             
-            var userCollection = _ctx.mDatabase.GetCollection<UserModel>("users");
+            var userCollection = _ctx.mDatabase.GetCollection<UserModel>(collectionName);
             var filter = Builders<BsonDocument>.Filter.Empty;
 
             var result = userCollection.Find(new BsonDocument()).ToList();
             return result;
         }
 
-        public void AddUSer(BsonDocument user)
+        /// <summary>
+        /// Inserts a new user into the Mongo Collection (users)
+        /// </summary>
+        /// <param name="user">A BSonDocument with user details.</param>
+        /// <param name="collectionName">The name of the collection in which to add the new document</param>
+        /// <returns></returns>
+        public string AddUSer(BsonDocument user, string collectionName)
         {
+            
             //JB. Specify the collection in which to store documents (data ;P)
-            var userCollection = _ctx.mDatabase.GetCollection<BsonDocument>("users");
+            var userCollection = _ctx.mDatabase.GetCollection<BsonDocument>(collectionName);
 
             userCollection.InsertOne(user);
 
+            return "Success";
         }
 
 
